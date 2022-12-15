@@ -70,6 +70,7 @@ for (int i = 0; i < 10000; i++)
         
     }
 }
+
 Monkey first = monkeys.MaxBy(x => x.count);
 monkeys.Remove(first);
 Monkey second = monkeys.MaxBy(x => x.count);
