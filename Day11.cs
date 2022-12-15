@@ -53,6 +53,7 @@ foreach (var monkey in monkeys)
     div *= int.Parse(monkey.test.Split(",").First());
 }
 
+//for (int i = 0; i < 20; i++)
 for (int i = 0; i < 10000; i++)
 {
     foreach (var monkey in monkeys)
@@ -61,6 +62,7 @@ for (int i = 0; i < 10000; i++)
         {
             monkey.DoOperation();
             monkey.count++;
+            //monkey.itemWorryLevel[0] = monkey.itemWorryLevel[0] / 3;
             monkey.itemWorryLevel[0] = monkey.itemWorryLevel[0] % div;
             x = monkey.Test();
             monkeys[x].itemWorryLevel.Add(Monkey.item);
@@ -71,8 +73,6 @@ for (int i = 0; i < 10000; i++)
 Monkey first = monkeys.MaxBy(x => x.count);
 monkeys.Remove(first);
 Monkey second = monkeys.MaxBy(x => x.count);
-Console.WriteLine(first.count);
-Console.WriteLine(second.count);
 Console.WriteLine(first.count * second.count);
 
 public class Monkey
