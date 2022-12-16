@@ -47,6 +47,7 @@ while (line != null)
         }
         x += int.Parse(split[1]);
     }
+    
     else
     {
         cycle++;
